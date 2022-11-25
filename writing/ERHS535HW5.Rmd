@@ -1,8 +1,24 @@
 ---
-title: "ERHS535-HW5"
+title: "535 HW5"
 author: "Kelly DeBie"
-date: "2022-11-14"
-output: html_document
+date: "2022-11-30"
+output: word_document
 ---
 
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Homicide Data for 50 U.S. Cities
+
+```{r, message=FALSE, output=FALSE}
+## Packages to be installed for this assignment  
+library(tidyverse)
+library(forcats)  
+library(broom)  
+library(purrr)  
+library(ggplot2)
+library(ggthemes) 
+library(scales)
+```
 
