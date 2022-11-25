@@ -33,7 +33,8 @@ homicides$city_name <- paste(homicides$city, homicides$state, sep=",")
 Add variable for unsolved homicides
 
 ```{r}
-homicides$disp_unsolved = (homicides$disposition != "Closed by arrest")  
+homicides$disp_unsolved = (homicides$disposition != "Closed by arrest") 
+head(homicides)
 
 ```
 
