@@ -21,8 +21,19 @@ library(ggplot2)
 library(ggthemes) 
 library(scales)
 ```
+
+Read in the Data 
+
 ```{r}
 homicides <- read.csv("C:/Users/k_deb/OneDrive - Colostate/ERHS 535/homicide-data.csv")  
 homicides$city_name <- paste(homicides$city, homicides$state, sep=",")  
 
 ```
+
+Add variable for unsolved homicides
+
+```{r}
+homicides$disp_unsolved = (homicides$disposition != "Closed by arrest")  
+
+```
+
