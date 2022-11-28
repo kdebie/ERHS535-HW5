@@ -41,8 +41,12 @@ head(homicides)
 
 
 ```{r}
-denver_map<- tracts("CO", "Denver")  
-ggplot(denver_map) +
-  geom_sf()
+denver_map<- tracts("CO", "Denver") 
+denver_homicides <- 
+  filter(homicides, city_name=="Denver,CO")
+head(denver_homicides)
+ggplot() +
+  geom_sf(data=denver_map) +
+  geom_point(data=denver_homicides, aes(x=lon, y=lat, color=disp_unsolved))
 ```
 
