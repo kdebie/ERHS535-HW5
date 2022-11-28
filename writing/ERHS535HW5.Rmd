@@ -51,5 +51,7 @@ ggplot() +
   labs(x= "Longitude", y="Latitude", title= "Homicides in Denver, Colorado", col= "Unsolved Case") +
   theme_few()
 
+###still need to facet by disposition and add race element
+
 ```
 
