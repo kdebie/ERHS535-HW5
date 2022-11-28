@@ -19,7 +19,8 @@ library(broom)
 library(purrr)  
 library(ggplot2)
 library(ggthemes) 
-library(scales)
+library(scales)  
+library(tigris)
 ```
 
 Read in the Data 
@@ -36,5 +37,12 @@ Add variable for unsolved homicides
 homicides$disp_unsolved = (homicides$disposition != "Closed by arrest") 
 head(homicides)
 
+```
+
+
+```{r}
+denver_map<- tracts("CO", "Denver")  
+ggplot(denver_map) +
+  geom_sf()
 ```
 
