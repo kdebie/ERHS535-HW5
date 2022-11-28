@@ -54,7 +54,9 @@ denver <- ggplot() +
   geom_point(data=denver_homicides, aes(x=lon, y=lat, col=fct_lump(victim_race, n=3))) +
   labs(x= "Longitude", y="Latitude", title= "Homicides in Denver, Colorado", col= "Victim Race") +
   theme_few()
-denver + facet_wrap(~disp_unsolved, ncol=1)
+den_labels <- as_labeller(c('FALSE' = "Solved", 
+               'TRUE' = "Unsolved")) 
+denver + facet_wrap(~disp_unsolved, ncol=1, labeller=den_labels)
 
 ```
 
