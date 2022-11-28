@@ -40,7 +40,7 @@ head(homicides)
 ```
 
 
-```{r fig.height=10, fig.width=14}
+```{r fig.height=10, fig.width=10}
 denver_map<- tracts("CO", "Denver") 
 denver_homicides <- 
   filter(homicides, city_name=="Denver,CO")
