@@ -40,19 +40,19 @@ head(homicides)
 ```
 
 
-```{r}
+```{r fig.height=10, fig.width=14}
 denver_map<- tracts("CO", "Denver") 
 denver_homicides <- 
   filter(homicides, city_name=="Denver,CO")
 head(denver_homicides)
 denver <- ggplot() +
   geom_sf(data=denver_map) +
-  geom_point(data=denver_homicides, aes(x=lon, y=lat, col=disp_unsolved)) +
-  labs(x= "Longitude", y="Latitude", title= "Homicides in Denver, Colorado", col= "Unsolved Case") +
+  geom_point(data=denver_homicides, aes(x=lon, y=lat, col=victim_race)) +
+  labs(x= "Longitude", y="Latitude", title= "Homicides in Denver, Colorado", col= "Victim Race") +
   theme_few()
-denver + facet_wrap(~disp_unsolved, ncol=2)
+denver + facet_wrap(~disp_unsolved, ncol=1)
 
-###still need to adjust width and add race element
+###still need to adjust facet labels
 
 ```
 
