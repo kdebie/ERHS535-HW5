@@ -2,7 +2,9 @@
 title: "535 HW5"
 author: "Kelly DeBie"
 date: "2022-11-30"
-output: word_document
+output:
+  pdf_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE, warning=FALSE}
